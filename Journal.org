@@ -1,0 +1,61 @@
+* A Work Journal
+** TODO Aug 7th [1/2]
+*** DONE Tools
+    CLOSED: [2015-08-07 Fri 22:02]
+    - State "DONE"       from "TODO"       [2015-08-07 Fri 22:02]
+**** Emacs(Org Mode)
+1. To use specific package, code like below can be inserted:
+  #+begin_example
+   #+LATEX_HEADER: \usepackage{xyz}
+  #+end_example
+2. Some specific command can be inserted the same way:
+  #+begin_example
+   #+LATEX_HEADER: \newcommand{\bm}[1]{\mbox{\boldmath{$#1$}}}
+  #+end_example
+**** Latex
+1. To input Young-Tableau-formalism, package youngtab can be used:
+   #+begin_example
+    \usepackage[...]{youngtab}
+   #+end_example
+   The package has four options. *The first option, vcentermath, turns on the
+   vertical centering of the tableaux in math mode.* The other option just 
+   choose the default ones.
+   The format of input can like,
+   #+begin_example
+    \young(aa,b)
+   #+end_example
+   while the blank young-tableaux can be like,
+   #+begin_example
+    \yng(2,1)
+   #+end_example
+2. Dirac symbols like bra and ket can use pacakge
+   #+begin_example
+    \usepackage{braket}
+   #+end_example
+   To input bra and ket symbols, just follow:
+   #+begin_example
+    \bra{}
+   #+end_example
+   or
+   #+begin_example
+    \ket{}
+   #+end_example
+**** Git
+1. Account information setup
+   #+BEGIN_SRC sh
+   $ git config --global user.name "CuriousBull"
+   $ git config --global user.email "bullinbenniu@gmail.com"
+   #+END_SRC
+2. Build A Project
+   #+BEGIN_SRC sh
+   $ mkdir Documents
+   $ git init
+   #+END_SRC
+   After doing this, output would like this:
+   #+begin_example
+   Initialized empty Git repository in /home/huchen/Documents
+   #+end_example
+*** TODO Physics
+1. Summarize single particle wave function
+2. Summarize single particle hamiltonian operator
+3. Summarize calculations(Part finished)
