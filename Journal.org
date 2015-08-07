@@ -46,7 +46,7 @@
    $ git config --global user.name "CuriousBull"
    $ git config --global user.email "bullinbenniu@gmail.com"
    #+END_SRC
-2. Build A Project
+2. Build a project
    #+BEGIN_SRC sh
    $ mkdir Documents
    $ git init
@@ -55,6 +55,99 @@
    #+begin_example
    Initialized empty Git repository in /home/huchen/Documents
    #+end_example
+3. Add files to our repository
+   #+BEGIN_SRC sh
+   $ git add RGM.org
+   $ git add Journal.org
+   $ git commit -m "First commit"
+   #+END_SRC
+   Then, you would see the output like:
+   #+begin_example
+   [master（根提交） 469f12b] First commit
+   2 files changed, 121 insertions(+)
+   create mode 100644 Journal.org
+   create mode 100644 RGM.org
+   #+end_example
+4. Check status
+   #+BEGIN_SRC sh
+   $ git status 
+   #+END_SRC
+5. Abandon changes
+   #+BEGIN_SRC sh
+   $ git checkout -- <file>...
+   #+END_SRC
+6. History
+   #+BEGIN_SRC sh
+   $ git log 
+   #+END_SRC
+   A more pretty style can be like this:
+   #+BEGIN_SRC sh
+   $ git log --pretty=oneline
+   #+END_SRC
+   and more options can be:
+   #+BEGIN_SRC sh
+   $ git log --pretty=oneline --max-count=2
+   $ git log --pretty=oneline --since='5 minutes ago'
+   $ git log --pretty=oneline --until='5 minutes ago'
+   $ git log --pretty=oneline --author=<your name>
+   $ git log --pretty=oneline --all
+   #+END_SRC
+   Man git-log will tell more.
+   A better look like can be set as:
+   #+BEGIN_SRC sh
+   $ git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short'
+   #+END_SRC
+7. Get old version
+   #+BEGIN_SRC sh
+   $ git hist
+   #+END_SRC
+   And if you want the old version, then
+   #+BEGIN_SRC sh
+   $ git checkout <hash> 
+   #+END_SRC
+   If you want to get back to master branch,
+   #+BEGIN_SRC sh
+   $ git checkout master
+   #+END_SRC
+8. Tag submit
+   #+BEGIN_SRC sh
+   $ git tag v1-beta
+   #+END_SRC
+9. Create new branch and jump between branches
+   #+BEGIN_SRC sh
+   $ git checkout -b <branch_name>
+   #+END_SRC
+   #+BEGIN_SRC sh
+   $ git checkout master
+   #+END_SRC
+10. Remote setting
+   #+BEGIN_SRC sh
+   $ cd ~
+   $ ssh-keygen -t rsa -C "username@email.com"
+   #+END_SRC
+   Log in github.com using your account. Click "Accout setting", choose "SSH Keys",
+   insert contents as id_rsa.pub.
+   After doing these, add a new repo with any name you like.   
+   Github website will git a hint like below:
+   #+begin_example sh
+   $ echo "# Documents" >> README.md
+   $ git init
+   $ git add README.md
+   $ git commit -m "first commit"
+   $ git remote add origin https://github.com/bullinbenniu/Documents.git
+   $ git push -u origin master
+   #+end_example
+   So just do below:
+   #+BEGIN_SRC sh
+   $ git remote add origin https://github.com/bullinbenniu/Documents.git 
+   #+END_SRC
+   #+BEGIN_SRC sh
+   $ git push -u origin master 
+   #+END_SRC
+11. Clone remote repos
+   #+BEGIN_SRC sh
+   $ git clone https://github.com/bullinbenniu/Documents.git 
+   #+END_SRC
 *** TODO Physics
 1. Summarize single particle wave function
 2. Summarize single particle hamiltonian operator
