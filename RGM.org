@@ -15,7 +15,7 @@
 6. Fully antisymmetrization should be applied to wave functions.
 7. Wave function of center-of-mass system is added to transform wave functions in-
    to productions of single partical wave functions.
-**** Complex Analysis
+**** Complex Analysis I (Single Baryon)
 1. Wave function of a single baryon can be written as:
    \begin{equation}
    \psi(123)=\phi^{spatial}(123)\chi^{color}(123)\eta^{\sigma\cdot{}flavor}(123)\\
@@ -100,3 +100,22 @@
       &&{}\times\left[\bm{S}_{total}(\bm{S}_{total}+1)-{}
       \bm{S}_{\alpha}(\bm{S}_{\alpha}+1)-\frac{3}{4}\right]
       \end{eqnarray}
+**** Complex Analysis II (Few Body Problem) 
+Here are some points need to be considered carefully:
+1. To deal with matrix elements in a unified way, we transfer single body operator into a two-body operator.
+   Then matrix elements like below need to be considered,
+   \begin{equation}
+   \bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}H_{i j}\ket{\bm{x}_{1}\bm{x}_{2}}
+   \end{equation}
+   A general expression for this can be transfered like:
+   \begin{eqnarray}
+   \bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}H_{i j}\ket{\bm{x}_{1}\bm{x}_{2}}&=&
+   \left(\frac{1}{2b^2}\right)^{\frac{3}{2}}\rm{exp}(-\frac{1}{4b^2}\left[(\bm{x}_{1}^\prime-\bm{x}_{1})^2
+   +(\bm{x}_{2}^\prime-\bm{x}_{2})^2\right])\times{}\nonumber\\
+   &&{}\times{}\int\hat{H_{i j}}\rm{exp}(-\frac{(\bm{r}-\frac{1}{2}\bm{\rho})^2}{2b^2}\rm{d}\bm{r}
+   \end{eqnarray}
+   Among which,
+   \begin{eqnarray}
+   \bm{r}&=&\bm{r}_1-\bm{r}_2\\
+   \bm{\rho}=(\bm{x}_{1}+\bm{x}_{1}^\prime)-(\bm{x}_{2}+\bm{x}_{2}^\prime)
+   \end{eqnarray}
