@@ -1,0 +1,174 @@
+% Created 2015-08-09 Sun 00:00
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage[vcentermath]{youngtab}
+\usepackage{braket}
+\newcommand{\bm}[1]{\mbox{\boldmath{$#1$}}}
+\author{CuriousBull}
+\date{\today}
+\title{RGM}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.5.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{RGM}
+\label{sec-1}
+\subsection{9-Quark System}
+\label{sec-1-1}
+\subsubsection{DineutronLambda System}
+\label{sec-1-1-1}
+\begin{enumerate}
+\item Theoretic Concepts
+\label{sec-1-1-1-1}
+\begin{enumerate}
+\item A 9-Quart System can be divided into three baryon subsystem.
+\item Each baryon system will be treated locally.
+\item The interaction between each cluster remains unknown.
+\item Complete set, Gaussian Functions will be adopted to describe interaction funct-
+ions.
+\item To simplify our case, \textbf{color part} of wave function will be treated as three s-
+inglet wave functions.
+\item Fully antisymmetrization should be applied to wave functions.
+\item Wave function of center-of-mass system is added to transform wave functions in-
+to productions of single partical wave functions.
+\end{enumerate}
+\item Complex Analysis I (Single Baryon)
+\label{sec-1-1-1-2}
+\begin{enumerate}
+\item Wave function of a single baryon can be written as:
+\begin{equation}
+\psi(123)=\phi^{spatial}(123)\chi^{color}(123)\eta^{\sigma\cdot{}flavor}(123)\\
+\end{equation}
+Among which,\\
+\begin{eqnarray}
+\phi(123)&=&\phi(1)\phi(2)\phi(3)\\
+\phi(i)&=&\left(\frac{1}{\pi{}b^{2}}\right)^{\frac{3}{4}}\rm{exp}(-\frac{\bm{r}_{i}^2}{2b^2})\\
+\chi(123)&=&\young(1,2,3)\quad\young(r,g,b)\\
+\eta^{\sigma\cdot{}flavor}&=&\frac{1}{\sqrt{2}}\left(\young(12,3)\quad
+\young(uu,d)\quad\young(12,3)\quad\young(\alpha\alpha,\beta)
++\young(13,2)\quad\young(uu,d)\quad\young(13,2)\quad\young(\alpha\alpha,\beta)\right)
+\end{eqnarray}
+\item Hamiltonian operator for single baryon can be written as:
+\begin{equation}
+H = \sum_{i}^{3}(m_i+\frac{\bm{p}^{2}_{i}}{2m_i})+\sum_{i>j=1}^{3}V_{i j}-T_{c.m}
+\end{equation}
+Among which,\\
+\begin{eqnarray}
+V_{i j} & = & V_{i j}^C + V_{i j}^G\\
+V_{i j}^C & = & -a_c\bm{\lambda_i}\cdot\bm{\lambda_j}\cdot\bm{r}_{i j}\\
+V_{i j}^G & = & \alpha_s\frac{\bm{\lambda_i}\cdot\bm{\lambda_j}}{4}\left[\frac{1}
+{|\bm{r}_{i j}|}-\frac{\pi}{2}\delta(\bm{r}_{i j})\left(\frac{1}{m_{i}^2}+\frac{1}{m_{j}^2}
++ \frac{4\bm{\sigma}_i\cdot\bm{\sigma}_j}{3m_{i}m_{j}}\right)\right]\\
+T_{c.m} & = & \frac{(\sum\limits_{i=1}^{3}\bm{p}_{i})^{2}}{2M_{total}}
+\end{eqnarray}
+\item To simple our calculation, Jacobi's transformation is applied:
+\begin{eqnarray}
+\frac{\bm{r}_1+\bm{r}_2}{2}&=&\bm{R}\\
+\bm{r}_1-\bm{r}_2&=&\bm{r}_{1 2}\equiv\bm{r}
+\end{eqnarray}
+and then, we obtain,\\
+\begin{eqnarray}
+\bm{r}_{1}^{2}+\bm{r}_{2}^{2}&=&\frac{\bm{r}^2+4\bm{R}^2}{2}\\
+{\rm d}\bm{r}_1{}{\rm d}\bm{r}_2&=&{\rm d}\bm{r}{\rm d}\bm{R}
+\end{eqnarray}
+\item Some matrix elements calculation steps are listed below:
+\begin{eqnarray}
+\bra{\phi(123)}\bm{r}_{1 2}\ket{\phi(123)}&=&\bra{\phi(1)\phi(2)}\bm{r}_{1 2}\ket{\phi(1)\phi(2)}\nonumber\\
+& = & \left(\frac{1}{\pi{}b^2}\right)^3\iint{}\rm{exp}(-\frac{\bm{r}_{1}^2+\bm{r}_{2}^2}{2b^2})\bm{r}_{1 2}^2
+\rm{exp}(-\frac{\bm{r}_{1}^2+\bm{r}_{2}^2}{2b^2}){\rm d}{\bm r}_1{}{\rm d}{\bm r}_2\nonumber\\
+&=&\left(\frac{1}{\pi{}b^2}\right)^3\iint{}\rm{exp}(-\frac{\bm{r}^2+4\bm{R}^2}{2b^2})\bm{r}^2{\rm d}{\bm r}{\rm d}{\bm R}\nonumber\\
+&=&\left(\frac{1}{\pi{}b^2}\right)^3\times{}4\pi\int_{0}^{\infty}\rm{exp}(-\frac{2{\bm{R}^2}}{b^2})\bm{R}^2{\rm d}{\bm R}\times{}
+\nonumber\\
+&&{}\times{}4\pi\int_{0}^{\infty}\rm{exp}(-\frac{\bm{r}^2}{2b^2}){\rm d}{\bm r}\nonumber\\
+&=&\left(\frac{1}{\pi{}b^2}\right)^3\times{}4\pi\times\frac{1}{4}\frac{b^3\sqrt{\pi}}{2\sqrt{2}}\times{}4\pi\times
+\frac{3b^5}{8}\times{}4\sqrt{2\pi}\nonumber\\
+&=&3b^2
+\end{eqnarray}
+In same way, terms include $\frac{1}{\bm{r}}$ and $\delta(\bm{r})$ can be calculated easily. Results are listed below:
+\begin{eqnarray}
+\bra{\phi(123)}\frac{1}{|\bm{r}_{1 2}|}\ket{\phi(123)}&=&\bra{\phi(1)\phi(2)}\bm{r}_{1 2}\ket{\phi(1)\phi(2)}\nonumber\\
+&=&\frac{1}{b}\sqrt{\frac{2}{\pi}}\\
+\bra{\phi(123)}\delta(\bm{r}_{1 2})\ket{\phi(123)}&=&\bra{\phi(1)\phi(2)}\bm{r}_{1 2}\ket{\phi(1)\phi(2)}\nonumber\\
+&=&\left(\frac{1}{2\pi{}b^2}\right)^{\frac{3}{2}}
+\end{eqnarray}
+To calculate terms include $\bm{p}_i$, we need to calculate $\bra{\phi(i)}\bm{p}_{i}^{2}\ket{phi(i)}$,
+\begin{eqnarray}
+\bra{\phi(123)}\bm{p}_{1}\ket{\phi(123)}&=&\bra{\phi(1)}\bm{p}_{1}\ket{\phi(1)}\nonumber\\
+&=&\int_{0}^{\infty}\rm{exp}(-\frac{r_{1}}{2b^2})\left[-\frac{1}{r_{1}^2}\frac{\partial}{\partial r_1}(r_{1}^2\frac{\partial}{\partial r_1}
+exp(-\frac{r_1}{2b^2}))\right]r_{1}^2\rm{d}r_{1}sin\theta\rm{d}\theta{}\rm{d}\phi\nonumber\\
+&=&4\pi\int_{0}^{\infty}\rm{exp}(-\frac{r_{1}}{2b^2})(\frac{3}{b^2}-\frac{r_{1}^2}{b^4})r_{1}^2\rm{d}r_{1}\nonumber\\
+&=&4\pi(\frac{3b}{4}\sqrt{\pi}-\frac{3b}{8}\sqrt{\pi})
+\end{eqnarray}
+For term like $\sum\limits_{i>j=1}^{3}\frac{\bm{\sigma}_i\cdot\bm{\sigma}_j}{m_i\cdot{}m_j}$, it's convenient to do some transformation:
+\begin{enumerate}
+\item $m_1=m_2=m_3$
+\begin{eqnarray}
+\sum\limits_{i>j=1}^{3}\frac{\bm{\sigma}_i\cdot\bm{\sigma}_j}{m_i\cdot{}m_j}&=&4\times\frac{1}{m_{1}^2}\left[\bm{S}_1\cdot\bm{S}_2+
+\bm{S}_1\cdot\bm{S}_3+\bm{S}_2\cdot\bm{S}_3\right]\nonumber\\
+&=&\frac{2}{m_{1}^2}\left[(\bm{S}_{1}+\bm{S}_{2}+\bm{S}_{3})^2-(\bm{S}_{1}^2+\bm{S}_{2}^2+\bm{S}_{3}^2)\right]\nonumber\\
+&=&\frac{2}{m_{1}^2}\left[\bm{S}_{total}(\bm{S}_{total}+1)-\frac{9}{4}\right]
+\end{eqnarray}
+\item $m_1=m_2\neq{}m_3$
+\begin{eqnarray}
+\sum\limits_{i>j=1}^{3}\frac{\bm{\sigma}_i\cdot\bm{\sigma}_j}{m_i\cdot{}m_j}&=&4\left[\frac{\bm{S}_1\cdot\bm{S}_2}
+{m_{1}^2}+\frac{1}{m_1\cdot{}m_3}
+(\bm{S}_1+\bm{S}_2)\cdot\bm{S}_3\right]\nonumber\\
+&=&\frac{2}{m_{1}^2}\left[(\bm{S}_{1}+\bm{S}_{2})^2-\bm{S}_{1}^2-\bm{S}_{2}^2\right]+\frac{2}{m_1{}m_3}
+\left[\bm{S}_{total}^2-(\bm{S}_{1}+\bm{S}_{2})^2-\bm{S}_{3}^2\right]\nonumber\\
+&=&\frac{2}{m_{1}^2}\left[\bm{S}_{\alpha}(\bm{S}_{\alpha}+1)-\frac{3}{2}\right]+\frac{2}{m_1{}m_3}\times{}
+\nonumber\\
+&&{}\times\left[\bm{S}_{total}(\bm{S}_{total}+1)-{}
+\bm{S}_{\alpha}(\bm{S}_{\alpha}+1)-\frac{3}{4}\right]
+\end{eqnarray}
+\end{enumerate}
+\end{enumerate}
+\item Complex Analysis II (Few Body Problem)
+\label{sec-1-1-1-3}
+Here are some points need to be considered carefully:
+\begin{enumerate}
+\item To deal with matrix elements in a unified way, we transfer single body operator into a two-body operator.
+Then matrix elements like below need to be considered,
+\begin{equation}
+\bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}H_{i j}\ket{\bm{x}_{1}\bm{x}_{2}}
+\end{equation}
+A general expression for this can be transfered like:
+\begin{eqnarray}
+\bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}H_{i j}\ket{\bm{x}_{1}\bm{x}_{2}}&=&
+\left(\frac{1}{2b^2}\right)^{\frac{3}{2}}\rm{exp}(-\frac{1}{4b^2}\left[(\bm{x}_{1}^\prime-\bm{x}_{1})^2
++(\bm{x}_{2}^\prime-\bm{x}_{2})^2\right])\times{}\nonumber\\
+&&{}\times{}\int\hat{H_{i j}}\rm{exp}(-\frac{(\bm{r}-\frac{1}{2}\bm{\rho})^2}{2b^2}\rm{d}\bm{r}
+\end{eqnarray}
+Among which,
+\begin{eqnarray}
+\bm{r}&=&\bm{r}_1-\bm{r}_2\\
+\bm{\rho}=(\bm{x}_{1}+\bm{x}_{1}^\prime)-(\bm{x}_{2}+\bm{x}_{2}^\prime)
+\end{eqnarray}
+\item The handle of terms include $\frac{1}{m}$, we've used a special method.
+For a case with 8 u quark and 1 s quark, the $\frac{1}{m}$ can be expressed as:
+\begin{equation}
+\frac{1}{m}=\frac{8}{9m_u}+\frac{1}{9m_s}
+\end{equation}
+\end{enumerate}
+\end{enumerate}
+% Emacs 24.5.1 (Org mode 8.2.10)
+\end{document}

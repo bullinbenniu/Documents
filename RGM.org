@@ -119,3 +119,8 @@ Here are some points need to be considered carefully:
    \bm{r}&=&\bm{r}_1-\bm{r}_2\\
    \bm{\rho}=(\bm{x}_{1}+\bm{x}_{1}^\prime)-(\bm{x}_{2}+\bm{x}_{2}^\prime)
    \end{eqnarray}
+2. The handle of terms include $\frac{1}{m}$, we've used a special method.
+   For a case with 8 u quark and 1 s quark, the $\frac{1}{m}$ can be expressed as:
+   \begin{equation}
+   \frac{1}{m}=\frac{8}{9m_u}+\frac{1}{9m_s}
+   \end{equation}
