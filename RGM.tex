@@ -1,4 +1,4 @@
-% Created 2015-08-09 Sun 22:39
+% Created 2015-08-10 Mon 19:15
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -162,7 +162,7 @@ A general expression for this can be transfered like:
 Among which,
 \begin{eqnarray}
 \bm{r}&=&\bm{r}_1-\bm{r}_2\\
-\bm{\rho}=(\bm{x}_{1}+\bm{x}_{1}^\prime)-(\bm{x}_{2}+\bm{x}_{2}^\prime)
+\bm{\rho}&=&(\bm{x}_{1}+\bm{x}_{1}^\prime)-(\bm{x}_{2}+\bm{x}_{2}^\prime)
 \end{eqnarray}
 \item The handle of terms include $\frac{1}{m}$, we've used a special method.
 For a case with 8 u quark and 1 s quark, the $\frac{1}{m}$ can be expressed as:
@@ -185,7 +185,7 @@ then, we obtain terms,
 +(\bm{x}_{2}^\prime-\bm{x}_{2})^2\right]\mathscr{O}_2\\
 \bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}\bm{p}_1\cdot\bm{p}_2\ket{\bm{x}_{1}\bm{x}_{2}}&=&
 -\frac{\hbar^2[(\bm{x}_{1}^\prime-\bm{x}_{1})^2
-+(\bm{x}_{2}^\prime-\bm{x}_{2})^2]}{4b^4}\mathscr{O}_2\\
++ (\bm{x}_{2}^\prime-\bm{x}_{2})^2]}{4b^4}\mathscr{O}_2\\
 \bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}\bm{r}^2\ket{\bm{x}_{1}\bm{x}_{2}}&=&(3b^2+\frac{\bm{\rho}^2}{4})\mathscr{O}_2\\
 \bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}\frac{1}{r}\ket{\bm{x}_{1}\bm{x}_{2}}&=&\frac{2}{\rho}erf(\frac{\rho}{\sqrt{8b^2}})\mathscr{O}_2\\
 \bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}\delta(r)\ket{\bm{x}_{1}\bm{x}_{2}}&=&\left(\frac{1}{2\pi{}b^2}\right)^{\frac{3}{2}}
@@ -213,6 +213,13 @@ r\rm{d}r\rm{d}\phi\nonumber\\
 &=&\left(\frac{1}{2\pi{}b^2}\right)^{\frac{3}{2}}\mathscr{O}_2\times{}2m(-\frac{2b^2}{\rho})\times{}2\pi\times{}\nonumber\\
 &&\left(-\rho\cdot\frac{\sqrt{\pi}}{2(\frac{1}{2b^2})^{\frac{1}{2}}}\right)\nonumber\\
 &=&2m\mathscr{O}_2
+\end{eqnarray}
+\begin{eqnarray}
+\bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}\frac{\bm{p}_{1}^2}{2m_{1}}+\frac{\bm{p}_{2}^2}{2m_{2}}\ket{\bm{x}_{1}\bm{x}_{2}}
+&=&\left(\frac{1}{\pi{}b^2}\right)^{\frac{3}{2}}\frac{1}{2m}\int{}\rm{exp}(-\frac{1}{2b^2}[(\bm{r}_1-\bm{x}_{1}^{\prime})^2+
+(\bm{r}_2-\bm{x}_{2}^{\prime})^2])(\bm{p}_{1}^2+{}\nonumber\\
+&&{}+\bm{p}_{2}^2)
+\rm{exp}(-\frac{1}{2b^2}[(\bm{r}_1-\bm{x}_{1})^2+(\bm{r}_2-\bm{x}_{2})^2])\rm{d}\bm{r}_1\rm{d}\bm{r}_2
 \end{eqnarray}
 \end{enumerate}
 \end{enumerate}
