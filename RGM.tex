@@ -1,4 +1,4 @@
-% Created 2015-08-09 Sun 00:00
+% Created 2015-08-09 Sun 22:39
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -18,6 +18,7 @@
 \tolerance=1000
 \usepackage[vcentermath]{youngtab}
 \usepackage{braket}
+\usepackage{mathrsfs}
 \newcommand{\bm}[1]{\mbox{\boldmath{$#1$}}}
 \author{CuriousBull}
 \date{\today}
@@ -168,6 +169,51 @@ For a case with 8 u quark and 1 s quark, the $\frac{1}{m}$ can be expressed as:
 \begin{equation}
 \frac{1}{m}=\frac{8}{9m_u}+\frac{1}{9m_s}
 \end{equation}
+\item Some calculations of terms are listed below:
+For convenience, we denote,
+\begin{equation}
+\mathscr{O}_2=\rm{exp}(-\frac{1}{4b^2}\left[(\bm{x}_{1}^\prime-\bm{x}_{1})^2
++(\bm{x}_{2}^\prime-\bm{x}_{2})^2\right])
+\end{equation}
+then, we obtain terms,
+\begin{eqnarray}
+\bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}m_{1}+m_{2}\ket{\bm{x}_{1}\bm{x}_{2}}&=&2m\mathscr{O}_2\\
+\bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}\frac{\bm{p}_{1}^2}{2m_{1}}+\frac{\bm{p}_{2}^2}{2m_{2}}\ket{\bm{x}_{1}\bm{x}_{2}}
+&=&\frac{3\hbar^2}{4mb^2}\left[2-\frac{(\bm{x}_{1}^\prime-\bm{x}_{1})^2
++(\bm{x}_{2}^\prime-\bm{x}_{2})^2}{6b^2}\right]\mathscr{O}_2\nonumber\\
+&=&\frac{\hbar^2}{8mb^4}\left[12b^2-(\bm{x}_{1}^\prime-\bm{x}_{1})^2
++(\bm{x}_{2}^\prime-\bm{x}_{2})^2\right]\mathscr{O}_2\\
+\bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}\bm{p}_1\cdot\bm{p}_2\ket{\bm{x}_{1}\bm{x}_{2}}&=&
+-\frac{\hbar^2[(\bm{x}_{1}^\prime-\bm{x}_{1})^2
++(\bm{x}_{2}^\prime-\bm{x}_{2})^2]}{4b^4}\mathscr{O}_2\\
+\bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}\bm{r}^2\ket{\bm{x}_{1}\bm{x}_{2}}&=&(3b^2+\frac{\bm{\rho}^2}{4})\mathscr{O}_2\\
+\bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}\frac{1}{r}\ket{\bm{x}_{1}\bm{x}_{2}}&=&\frac{2}{\rho}erf(\frac{\rho}{\sqrt{8b^2}})\mathscr{O}_2\\
+\bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}\delta(r)\ket{\bm{x}_{1}\bm{x}_{2}}&=&\left(\frac{1}{2\pi{}b^2}\right)^{\frac{3}{2}}
+\rm{exp}(-\frac{\bm{\rho}^2}{8b^2})\mathscr{O}_2
+\end{eqnarray}
+The specific calculation steps are listed below:
+\begin{eqnarray}
+\bra{\bm{x}_{1}^\prime\bm{x}_{2}^\prime}m_{1}+m_{2}\ket{\bm{x}_{1}\bm{x}_{2}}&=&\left(\frac{1}{2\pi{}b^2}\right)^{\frac{3}{2}}
+\mathscr{O}_2\times{}2m\int\rm{exp}(-\frac{r^2+\frac{1}{4}\rho^2-r{}\rho{}cos\theta}{2b^2})\times{}\nonumber\\
+&&{}\times{}r^2sin\theta\rm{d}r\rm{d}\theta\rm{d}\phi\nonumber\\
+&=&\left(\frac{1}{2\pi{}b^2}\right)^{\frac{3}{2}}\mathscr{O}_2\times{}2m
+\int\rm{exp}(-\frac{r^2+\frac{1}{4}\rho^2-r{}\rho{}cos\theta}{2b^2})\times{}\nonumber\\
+&&{}\times{}r^2sin\theta\frac{\rm{d}\left(-\frac{r^2+\frac{1}{4}\rho^2-r{}\rho{}cos\theta}{2b^2}\right)}
+{-\frac{r{}\rho{}sin\theta}{2b^2}}
+\rm{d}r\rm{d}\phi\nonumber\\
+&=&\left(\frac{1}{2\pi{}b^2}\right)^{\frac{3}{2}}\mathscr{O}_2\times{}2m(-\frac{2b^2}{\rho})\times2\pi\times{}\nonumber\\
+&&{}\int(\rm{exp}(-\frac{r^2+\frac{1}{4}\rho^2+r{}\rho}{2b^2})-\rm{exp}
+(-\frac{r^2+\frac{1}{4}\rho^2-r{}\rho}{2b^2}))r\rm{d}r\rm{d}\phi\nonumber\\
+&=&\left(\frac{1}{2\pi{}b^2}\right)^{\frac{3}{2}}\mathscr{O}_2\times{}2m(-\frac{2b^2}{\rho})\times2\pi\times{}\nonumber\\
+&&{}\int(\rm{exp}(-\frac{(r+\frac{1}{2}\rho)^2}{2b^2})(r+\frac{\rho}{2})-\rm{exp}
+(-\frac{(r-\frac{1}{2}\rho)^2}{2b^2})(r-\frac{\rho}{2})-{}\nonumber\\
+&&-{}\rm{exp}(-\frac{(r+\frac{1}{2}\rho)^2}{2b^2})(\frac{\rho}{2})-
+\rm{exp}(-\frac{(r-\frac{1}{2}\rho)^2}{2b^2})(\frac{\rho}{2}))
+r\rm{d}r\rm{d}\phi\nonumber\\
+&=&\left(\frac{1}{2\pi{}b^2}\right)^{\frac{3}{2}}\mathscr{O}_2\times{}2m(-\frac{2b^2}{\rho})\times{}2\pi\times{}\nonumber\\
+&&\left(-\rho\cdot\frac{\sqrt{\pi}}{2(\frac{1}{2b^2})^{\frac{1}{2}}}\right)\nonumber\\
+&=&2m\mathscr{O}_2
+\end{eqnarray}
 \end{enumerate}
 \end{enumerate}
 % Emacs 24.5.1 (Org mode 8.2.10)
